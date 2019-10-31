@@ -4077,8 +4077,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj"
+            "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj": {
+              "projectPath": "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj"
             }
           }
         }
