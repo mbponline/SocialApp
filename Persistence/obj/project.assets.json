@@ -4054,11 +4054,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Persistence\\Persistence.csproj",
+      "projectPath": "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Persistence\\Persistence.csproj",
       "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Persistence\\obj\\",
+      "outputPath": "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4077,8 +4077,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj"
+            "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\nikol\\Desktop\\PortfolioCode\\Domain\\Domain.csproj"
             }
           }
         }
