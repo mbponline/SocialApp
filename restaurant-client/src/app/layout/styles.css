@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(234,234,234) !important;
+}
+
+.ui.inverted.top.fixed.menu {
+  background-image: linear-gradient(
+    135deg,
+    rgb(66, 5, 78) 0%,
+    rgb(141, 35, 136) 69%,
+    rgb(231, 47, 170) 89%,
+  ) !important;
+}
