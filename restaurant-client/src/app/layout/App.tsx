@@ -4,6 +4,7 @@ import { Container } from 'semantic-ui-react';
 import { IRestaurant } from '../models/restaurant';
 import NavBar from '../../features/nav/NavBar';
 import RestaurantDashbord from '../../features/restaurants/dashboard/RestaurantDashbord';
+import agent from '../api/agent';
 
 
 
@@ -25,30 +26,36 @@ const App = () =>{
     }
 
     const handleCreateRestaurant = (restaurant: IRestaurant) =>{
-      setRestaurants([...restaurants, restaurant]);
-      setSelectedRestaurant(restaurant);
-      setEditMode(false);
+      agent.Restaurants.create(restaurant).then(() => {
+        setRestaurants([...restaurants, restaurant]);
+        setSelectedRestaurant(restaurant);
+        setEditMode(false);
+      })
     }
 
     const handleEditRestaurant = (restaurant: IRestaurant) =>{
-      setRestaurants([...restaurants.filter(r => r.id !== restaurant.id), restaurant]);
-      setSelectedRestaurant(restaurant);
-      setEditMode(false);
+      agent.Restaurants.update(restaurant).then(() => {
+        setRestaurants([...restaurants.filter(r => r.id !== restaurant.id), restaurant]);
+        setSelectedRestaurant(restaurant);
+        setEditMode(false);    
+      })
     }
 
     const handleDeleteRestaurant = (id: string) => {
-      setRestaurants([...restaurants.filter(r => r.id !== id)])
+      agent.Restaurants.delete(id).then(() => {
+        setRestaurants([...restaurants.filter(r => r.id !== id)])
+      })
     }
 
   //This implementation of useEffect hook is the equivalent of a ComponentDidMount-method
   useEffect(() => {
-    axios.get<IRestaurant[]>('http://localhost:5000/api/restaurants')
+    agent.Restaurants.list()
     .then((response) => {
       let restaurants: IRestaurant[] = [];
-      response.data.forEach(restaurant =>{
+      response.forEach((restaurant:any) =>{
         restaurants.push(restaurant);
-      }
-        )
+      })
+        
           //updates state and causes a render which gets data from our api
       setRestaurants(restaurants);
     });
